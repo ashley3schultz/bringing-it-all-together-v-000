@@ -43,7 +43,7 @@ class Dog
     self.new(name: row[1], breed: row[2], id: row[0])
   end
 
-  def update 
+  def update
     DB[:conn].execute("UPDATE TABLE dogs SET name = ?, breed = ? WHERE id = ?",self.name, self.breed, self.id)
-  end 
+  end
 end
