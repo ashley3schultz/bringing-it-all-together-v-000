@@ -26,6 +26,7 @@ class Dog
   end
 
   def self_by_id(num)
-    DB[:conn].execute("SELECT * FROM dogs WHERE id = ?",num)
+    dog = DB[:conn].execute("SELECT * FROM dogs WHERE id = ?",num)
+    dog
   end
 end
