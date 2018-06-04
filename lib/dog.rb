@@ -38,4 +38,8 @@ class Dog
     row = DB[:conn].execute("SELECT * FROM dogs WHERE name = ?",name).flatten
     self.new(name: row[1], breed: row[2], id: row[0])
   end
+
+  def self.new_from_db(row)
+    self.new(name: row[1], breed: row[2], id: row[0])
+  end 
 end
