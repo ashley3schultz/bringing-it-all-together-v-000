@@ -38,6 +38,7 @@ class Dog
       new_dog
     else
       find_by_id(row[0])
+    end
   end
 
   def self.find_by_name(name)
