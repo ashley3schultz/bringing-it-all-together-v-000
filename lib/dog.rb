@@ -22,6 +22,6 @@ class Dog
   end
 
   def self.create(dog)
-    self.new(name: dog[:name], breed: dog[:breed])
+    self.new(name: dog[:name], breed: dog[:breed]).save
   end
 end
