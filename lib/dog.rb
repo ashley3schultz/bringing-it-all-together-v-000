@@ -15,7 +15,7 @@ class Dog
     DB[:conn].execute("DROP TABLE dogs")
   end
 
-  def save 
+  def save
     DB[:conn].execute("INSERT INTO dogs (name, breed) VALUES (?, ?)",self.name, self.breed)
-  end 
+  end
 end
