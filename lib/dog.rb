@@ -33,7 +33,10 @@ class Dog
 
   def self.find_or_create_by(dog)
     row = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?",dog[:name], dog[:breed]).flatten
-    find_by_id(row[0]) || create(dog)
+    if row.empty?
+      create(dog)
+    end 
+    find_by_id(row[0])
   end
 
   def self.find_by_name(name)
