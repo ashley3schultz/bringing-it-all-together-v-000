@@ -36,6 +36,7 @@ class Dog
     binding.pry
     if row.empty?
       new_dog = create(dog)
+      new_dog
     else
       find_by_id(row[0])
   end
