@@ -31,7 +31,7 @@ class Dog
   end
 
   def self.find_or_create_by(arg)
-    row = DB[:conn].execute("SELECT * FROM dogs WHERE id = ?",num).flatten
+    find_by_name(arg) || create(arg)
   end
 
   def self.find_by_name(name)
