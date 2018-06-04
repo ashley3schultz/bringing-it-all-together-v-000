@@ -31,9 +31,9 @@ class Dog
     self.new(name: row[1], breed: row[2], id: row[0])
   end
 
-  def self.find_or_create_by(arg)
+  def self.find_or_create_by(dog)
     binding.pry
-    find_by_name(arg) || create(arg)
+    find_by_name(dog[:name]) || create(dog)
   end
 
   def self.find_by_name(name)
