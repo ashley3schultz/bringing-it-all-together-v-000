@@ -8,6 +8,6 @@ class Dog
   end
 
   def self.create_table
-    DB[:conn].execute("CREATE_TABLE students (id INTEGER PRIMARY KEY, name TEXT, breed TEXT")
+    DB[:conn].execute("CREATE TABLE students (id INTEGER PRIMARY KEY, name TEXT, breed TEXT")
   end
 end
