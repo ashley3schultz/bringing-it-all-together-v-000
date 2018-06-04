@@ -35,7 +35,7 @@ class Dog
     row = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?",dog[:name], dog[:breed]).flatten
     binding.pry
     if row.empty?
-      find_by_id(create(dog).id)
+      new_dog = create(dog)
     else
       find_by_id(row[0])
   end
