@@ -32,6 +32,7 @@ class Dog
   end
 
   def self.find_or_create_by(arg)
+    binding.pry
     find_by_name(arg) || create(arg)
   end
 
