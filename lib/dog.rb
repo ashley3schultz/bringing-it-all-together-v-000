@@ -24,4 +24,8 @@ class Dog
   def self.create(dog)
     self.new(name: dog[:name], breed: dog[:breed]).save
   end
+
+  def self_by_id(num)
+    
+  end 
 end
