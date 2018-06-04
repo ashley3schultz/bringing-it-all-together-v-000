@@ -25,7 +25,7 @@ class Dog
     self.new(name: dog[:name], breed: dog[:breed]).save
   end
 
-  def self_by_id(num)
+  def self.find_by_id(num)
     dog = DB[:conn].execute("SELECT * FROM dogs WHERE id = ?",num)
     dog
   end
